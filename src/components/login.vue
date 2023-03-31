@@ -107,7 +107,6 @@
         </el-col>
       </el-row>
     </el-card>
-
   </div>
 </template>
 
@@ -156,6 +155,7 @@ export default {
       loading.value = true;
       let result = await loadJson('/test-task/create', {...newUser});
       loading.value = false;
+
       if (result.status === 'success') {
         newUser.id = result.user_id;
         let roles = [];
